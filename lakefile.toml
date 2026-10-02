@@ -1,0 +1,19 @@
+name = "KahnKalaiVerification"
+version = "0.1.0"
+defaultTargets = ["Solution", "Paper"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.32.0"
+
+[[lean_lib]]
+name = "KahnKalai"
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]
+
+[[lean_lib]]
+name = "Paper"
+roots = ["Paper"]
