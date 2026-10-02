@@ -1,0 +1,22 @@
+{
+  "TalagrandFiveConjectures.lean": "760f6d9da04827a0e3035fae679833c527e4a70ed63a8e03b24d00420acf5589",
+  "TalagrandConjectures.lean": "3b2ac18632c0b286fb53821f64fe920d6255d2caa33a8a28be8e60e0fa17040a",
+  "Audit.lean": "6aec072684bd321abdbbc688228f8a36b7be75ec609635daa6f3931461677e6e",
+  "lakefile.toml": "28d812496f0b60637f69b0e10273efd49c69af5ec59b0e76b67889743fe22a24",
+  "lake-manifest.json": "d441032f5151fd83fa614dd78955a541715e91eb8dd11081db39275da515399c",
+  "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+  "README.md": "61a34ad7c83e0daa4206b702cd4c83594fb06edaa6cea5529343f14480504262",
+  "verification/source-articles.json": "5bf64b95c283759291c9d45a00dbc12d8700b8075605dd4a5b86bc234f1f3677",
+  "TalagrandConjectures/Basic.lean": "db1f1ac7bf102288a81370b9ef8783360cfa2d82bab82bb81f4c800090fdaeb7",
+  "TalagrandConjectures/Certificates.lean": "63c2aa9b1d649cfaffe6302d07aba90062fb08327cd59d31756015187a5e6c1c",
+  "TalagrandConjectures/Energy.lean": "d87509642f29d7f6eb60e68e7339fbb7059f6fe5e333e227f179e265f2139e26",
+  "TalagrandConjectures/Extrapolation.lean": "48516f2dbd04b09f4d691693e273d243ae890b28940e1bbd41947f957835dab7",
+  "TalagrandConjectures/FangWang.lean": "bce2a9244958478623fb2eae331b75fa0e54bb12fb6374ab33fa04c90fd79e4c",
+  "TalagrandConjectures/Fourier.lean": "7886f806bf48d466abcb33ccba566f6057a338f9a617054d4be58424066ee535",
+  "TalagrandConjectures/Li.lean": "a0ca9dd16843d6c19a60fb6f0510a77d3441e6c3572450b7474e786ed9c9c6db",
+  "TalagrandConjectures/Logarithmic.lean": "b67a49c8d9590d7dafb9d115c0ea4abc8b3cc072017c9d7e869332273ef64132",
+  "TalagrandConjectures/Main.lean": "6005f09515ea9ee1cf7c8c30739ff530010a3ecc3c9c4314b69797ca1ff3902d",
+  "TalagrandConjectures/Unions.lean": "2486214ccfc26b501dc7b2641616559990d8e7b0479c743d4f404ea3cc683ca2",
+  "scripts/amalgamate.py": "a9e145af4a55d92335e1bcc684c9826ad4f9175529c1712e10f32eabec65caaa",
+  "scripts/verify.py": "b68cd49402c667c2e023e7e52c0abc6cf6e6e449634bbdae4204b663029fb077"
+}

@@ -1,0 +1,360 @@
+⚠ [8655/8666] Replayed TalagrandConjectures.Basic
+warning: TalagrandConjectures/Basic.lean:16:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.Up.compl`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:19:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.Down.compl`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:41:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.mass_nonneg`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:43:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.mass_pos`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:54:8: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  simp [̵F̵i̵n̵t̵y̵p̵e̵.̵s̵u̵m̵_̵b̵o̵o̵l̵,̵ ̵b̵i̵t̵,̵[̲b̲i̲t̲,̲ add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Basic.lean:80:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.ind_nonneg`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:82:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.ind_le_one`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:89:46: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TalagrandConjectures/Basic.lean:91:45: Variable name `x` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TalagrandConjectures/Basic.lean:92:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.ind_compl`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:104:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_bot`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:106:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_nonneg`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:109:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_pos`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:112:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_mul`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Basic.lean:117:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_le_one`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8656/8666] Replayed TalagrandConjectures.Fourier
+warning: TalagrandConjectures/Fourier.lean:27:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/Fourier.lean:35:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.basis_bot`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Fourier.lean:48:8: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  simp [F̵i̵n̵t̵y̵p̵e̵.̵s̵u̵m̵_̵b̵o̵o̵l̵,̵ ̵add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Fourier.lean:116:75: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: TalagrandConjectures/Fourier.lean:116:75: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8657/8666] Replayed TalagrandConjectures.Extrapolation
+warning: TalagrandConjectures/Extrapolation.lean:14:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.zmean`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Extrapolation.lean:19:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/Extrapolation.lean:21:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.zvariance`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Extrapolation.lean:31:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/Extrapolation.lean:33:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.diagonal_weight`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Extrapolation.lean:41:52: This simp argument is unused:
+  monoWeight
+
+Hint: Omit it from the simp argument list.
+  simp_all [m̵o̵n̵o̵W̵e̵i̵g̵h̵t̵,̵ ̵Bool.le_iff_imp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8658/8666] Replayed TalagrandConjectures.Energy
+warning: TalagrandConjectures/Energy.lean:64:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_le_self`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Energy.lean:97:39: This simp argument is unused:
+  Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [energy, Finset.mul_sum, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵,̵ ̵mul_ite, mul_zero, ite_mul, zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Energy.lean:97:74: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [energy, Finset.mul_sum, Finset.sum_mul, mul_ite, mul_zero, i̵t̵e̵_̵m̵u̵l̵,̵ ̵zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Energy.lean:97:83: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [energy, Finset.mul_sum, Finset.sum_mul, mul_ite, mul_zero, ite_mul,̵ ̵z̵e̵r̵o̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8659/8666] Replayed TalagrandConjectures.FangWang
+warning: TalagrandConjectures/FangWang.lean:21:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/FangWang.lean:23:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.parentKernel_zero`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/FangWang.lean:47:53: This simp argument is unused:
+  hw
+
+Hint: Omit it from the simp argument list.
+  simp [zcoord, thinningKernel, bval, bit, hJ, hx,̵ ̵h̵w̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/FangWang.lean:48:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/FangWang.lean:57:34: This simp argument is unused:
+  hJ
+
+Hint: Omit it from the simp argument list.
+  simp [thinningKernel, bval, hJ̵,̵ ̵h̵x]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/FangWang.lean:57:38: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [thinningKernel, bval, hJ,̵ ̵h̵x̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/FangWang.lean:97:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/FangWang.lean:97:41: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/FangWang.lean:114:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8660/8666] Replayed TalagrandConjectures.Logarithmic
+warning: TalagrandConjectures/Logarithmic.lean:30:42: This simp argument is unused:
+  mul_div_assoc
+
+Hint: Omit it from the simp argument list.
+  simp only [mul_add, mul_sub, mul_one, m̵u̵l̵_̵d̵i̵v̵_̵a̵s̵s̵o̵c̵,̵Finset.sum_add_distrib, Finset.sum_sub_distrib,
+  ̲  ̲ ̲ ̲ ̲ ̲← Finset.sum_div, ← Finset.sum_mul, ν.total, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Logarithmic.lean:31:54: This simp argument is unused:
+  ← Finset.sum_div
+
+Hint: Omit it from the simp argument list.
+  simp only [mul_add, mul_sub, mul_one, mul_div_assoc, Finset.sum_add_distrib,
+  ̲  ̲ ̲ ̲ ̲ ̲Finset.sum_sub_distrib, ← F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵d̵i̵v̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵←̵ ̵Finset.sum_mul, ν.total, one_mul]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Logarithmic.lean:70:40: Variable name `hp1` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TalagrandConjectures/Logarithmic.lean:74:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8661/8666] Replayed TalagrandConjectures.Certificates
+warning: TalagrandConjectures/Certificates.lean:49:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: TalagrandConjectures/Certificates.lean:36:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/Certificates.lean:49:10: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8662/8666] Replayed TalagrandConjectures.Unions
+warning: TalagrandConjectures/Unions.lean:9:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.flip_flip`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Unions.lean:80:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.downClosure_down`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Unions.lean:83:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.subset_downClosure`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Unions.lean:93:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.badTwo_subset_downClosure`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Unions.lean:109:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.badFour_subset_badTwo`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8663/8666] Replayed TalagrandConjectures.Li
+warning: TalagrandConjectures/Li.lean:19:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.chi_liCoord`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Li.lean:22:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/Li.lean:40:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandConjectures/Li.lean:42:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.liCoord_zero`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Li.lean:101:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_neg_lower`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandConjectures/Li.lean:122:31: This simp argument is unused:
+  if_neg hi
+
+Hint: Omit it from the simp argument list.
+  simp only [if_pos hij, i̵f̵_̵n̵e̵g̵ ̵h̵i̵,̵ ̵liLambda_eq_beta]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Li.lean:143:62: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [highEnergy, Finset.mul_sum, mul_ite, mul_zero, i̵t̵e̵_̵m̵u̵l̵,̵ ̵zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Li.lean:143:71: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [highEnergy, Finset.mul_sum, mul_ite, mul_zero, ite_mul,̵ ̵z̵e̵r̵o̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TalagrandConjectures/Li.lean:261:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.badThree_subset_badTwo`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8664/8666] Replayed TalagrandConjectures.Main
+warning: TalagrandConjectures/Main.lean:10:0: automatically included section variable(s) unused in theorem `TalagrandConjectures.monoWeight_eq_pow`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (8666 jobs).

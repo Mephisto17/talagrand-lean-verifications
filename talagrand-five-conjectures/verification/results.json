@@ -1,0 +1,78 @@
+{
+  "date_utc": "2026-10-02T14:32:33.684439+00:00",
+  "passed": true,
+  "commands": [
+    {
+      "command": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "log": "lean-version.txt"
+    },
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "project-build.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "Audit.lean"
+      ],
+      "exit_code": 0,
+      "log": "axioms.txt",
+      "standard_axioms_only": true,
+      "theorems_checked": [
+        "TalagrandConjectures.park_talagrand_theorem_2_1",
+        "TalagrandConjectures.conjecture_9_1",
+        "TalagrandConjectures.conjecture_9_1_up",
+        "TalagrandConjectures.conjecture_9_1_multiplicative",
+        "TalagrandConjectures.conjecture_7_12",
+        "TalagrandConjectures.conjecture_7_9",
+        "TalagrandConjectures.conjecture_7_3",
+        "TalagrandConjectures.conjecture_7_2",
+        "TalagrandConjectures.fang_wang_theorem_1_2",
+        "TalagrandConjectures.fang_wang_target_density",
+        "TalagrandConjectures.li_theorem_1_9",
+        "TalagrandConjectures.li_no_spread_badTwo",
+        "TalagrandConjectures.li_fractional_certificate",
+        "TalagrandConjectures.li_weaklySmall_badTwo",
+        "TalagrandConjectures.li_weaklySmall_badTwo_half"
+      ]
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "TalagrandFiveConjectures.lean"
+      ],
+      "exit_code": 0,
+      "log": "standalone-build.log",
+      "standard_axioms_only": true,
+      "theorems_checked": [
+        "TalagrandConjectures.park_talagrand_theorem_2_1",
+        "TalagrandConjectures.conjecture_9_1",
+        "TalagrandConjectures.conjecture_9_1_up",
+        "TalagrandConjectures.conjecture_9_1_multiplicative",
+        "TalagrandConjectures.conjecture_7_12",
+        "TalagrandConjectures.conjecture_7_9",
+        "TalagrandConjectures.conjecture_7_3",
+        "TalagrandConjectures.conjecture_7_2",
+        "TalagrandConjectures.fang_wang_theorem_1_2",
+        "TalagrandConjectures.fang_wang_target_density",
+        "TalagrandConjectures.li_theorem_1_9",
+        "TalagrandConjectures.li_no_spread_badTwo",
+        "TalagrandConjectures.li_fractional_certificate",
+        "TalagrandConjectures.li_weaklySmall_badTwo",
+        "TalagrandConjectures.li_weaklySmall_badTwo_half"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "file": "2609.08967v1(2).pdf",
+    "title": "On p-spread measures",
+    "authors": [
+      "Chen Li"
+    ],
+    "arxiv": "2609.08967v1",
+    "formalized_results": [
+      "Theorem 1.9",
+      "Corollary 3.1 (including the density-one-half endpoint)"
+    ],
+    "sha256": "9f2a6a032506a76b8b521ce9888092d95c9eb0566c3ad5862626d70b5026c5e1"
+  },
+  {
+    "file": "2609.18458v1.pdf",
+    "title": "A Note on a Result of Chen Li",
+    "authors": [
+      "Xuan Fang",
+      "Tianyu Wang"
+    ],
+    "arxiv": "2609.18458v1",
+    "formalized_results": [
+      "Theorem 1.2 in its all-increasing-events characterization",
+      "Corollary 1.3"
+    ],
+    "sha256": "39bba66bb0a811d41b575f3ac641fba7ad1f52814643755eae97d76f8672a27c"
+  }
+]

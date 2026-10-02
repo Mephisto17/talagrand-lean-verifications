@@ -1,0 +1,135 @@
+@TalagrandConjectures.park_talagrand_theorem_2_1 : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p a : ℝ},
+  0 < p →
+    p < 1 →
+      0 < a →
+        a < 1 →
+          ∀ (ν : TalagrandConjectures.Law X),
+            ν.Spread (p * (1 - a) / ((1 - p) * a)) →
+              ∀ {A : Set (TalagrandConjectures.Cube X)},
+                TalagrandConjectures.Down A →
+                  A.Nonempty →
+                    Real.log (TalagrandConjectures.measure p A) ≤
+                      ∑ J, ν.weight J * Real.log (TalagrandConjectures.theta a A J)
+@TalagrandConjectures.conjecture_9_1_up : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 / 2 →
+      ∀ (ν : TalagrandConjectures.Law X),
+        ν.Spread (1 / 2 * p) →
+          ∀ {A : Set (TalagrandConjectures.Cube X)},
+            TalagrandConjectures.Up A →
+              A ≠ Set.univ →
+                -∑ J, ν.weight J * Real.log (1 - TalagrandConjectures.theta (1 / 2) A J) ≤
+                  -Real.log (1 - TalagrandConjectures.measure p A)
+@TalagrandConjectures.conjecture_9_1_multiplicative : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 / 2 →
+      ∀ (ν : TalagrandConjectures.Law X),
+        ν.Spread (1 / 2 * p) →
+          ∀ {A : Set (TalagrandConjectures.Cube X)},
+            TalagrandConjectures.Down A →
+              A.Nonempty → TalagrandConjectures.measure p A ≤ ∏ J, TalagrandConjectures.theta (1 / 2) A J ^ ν.weight J
+@TalagrandConjectures.conjecture_7_12 : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ {A : Set (TalagrandConjectures.Cube X)},
+        TalagrandConjectures.Up A →
+          ∃ η,
+            ∀ (J : TalagrandConjectures.Cube X),
+              TalagrandConjectures.theta (1 / 2) A J ≤
+                TalagrandConjectures.measure p A *
+                  ∑ I, if I ≤ J then η.weight I / TalagrandConjectures.monoWeight (1 / 2 * p) I else 0
+@TalagrandConjectures.conjecture_7_9 : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p a : ℝ},
+  0 < p →
+    p < 1 →
+      0 < a →
+        a ≤ TalagrandConjectures.goldenAlpha →
+          ∀ (ν : TalagrandConjectures.Law X),
+            ν.Spread (a * p) →
+              ∀ {A : Set (TalagrandConjectures.Cube X)},
+                TalagrandConjectures.Up A →
+                  ∑ J, ν.weight J * TalagrandConjectures.theta a A J ≤ TalagrandConjectures.measure p A
+@TalagrandConjectures.conjecture_7_3 : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ {A : Set (TalagrandConjectures.Cube X)},
+        TalagrandConjectures.Up A →
+          TalagrandConjectures.WeaklySmall (1 / 2 * p)
+            {J | TalagrandConjectures.measure p A < TalagrandConjectures.theta (1 / 2) A J}
+@TalagrandConjectures.conjecture_7_2 : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ (A : Set (TalagrandConjectures.Cube X)),
+        1 - 1 / 3 ≤ TalagrandConjectures.measure p A →
+          TalagrandConjectures.WeaklySmall p (TalagrandConjectures.badUnions 3 A)
+@TalagrandConjectures.fang_wang_theorem_1_2 : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p t q : ℝ},
+  0 < p →
+    p < 1 →
+      0 < t →
+        t < 1 →
+          0 ≤ q →
+            t * q * (1 - p) / (p * (1 - t)) ≤ 1 →
+              ∀ (ν : TalagrandConjectures.Law X),
+                ν.Spread q →
+                  ∀ {A : Set (TalagrandConjectures.Cube X)},
+                    TalagrandConjectures.Up A →
+                      ∑ J, ν.weight J * TalagrandConjectures.theta t A J ≤ TalagrandConjectures.measure p A
+@TalagrandConjectures.fang_wang_target_density : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {t q : ℝ},
+  0 < t →
+    t < 1 →
+      0 < q →
+        ∀ (ν : TalagrandConjectures.Law X),
+          ν.Spread q →
+            ∀ {A : Set (TalagrandConjectures.Cube X)},
+              TalagrandConjectures.Up A →
+                ∑ J, ν.weight J * TalagrandConjectures.theta t A J ≤
+                  TalagrandConjectures.measure (t * q / (1 - t + t * q)) A
+@TalagrandConjectures.li_theorem_1_9 : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ (A : Set (TalagrandConjectures.Cube X)) (ν : TalagrandConjectures.Law X),
+        ν.Spread p → ν.Carried (TalagrandConjectures.badTwo A) → TalagrandConjectures.measure p A ≤ (1 - p) / (2 - p)
+@TalagrandConjectures.li_no_spread_badTwo : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ (A : Set (TalagrandConjectures.Cube X)),
+        1 / 2 ≤ TalagrandConjectures.measure p A → ¬∃ ν, ν.Spread p ∧ ν.Carried (TalagrandConjectures.badTwo A)
+@TalagrandConjectures.li_fractional_certificate : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p r : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ (A : Set (TalagrandConjectures.Cube X)),
+        0 < TalagrandConjectures.measure p A →
+          0 ≤ r →
+            TalagrandConjectures.beta p (1 / 2) * r ≤ 1 →
+              (∀ (I : TalagrandConjectures.Cube X), 0 ≤ TalagrandConjectures.liCertificate p A I) ∧
+                ∑ I, TalagrandConjectures.liCertificate p A I * TalagrandConjectures.monoWeight r I ≤
+                    TalagrandConjectures.beta p (1 / 2) * r *
+                        (TalagrandConjectures.measure p A - TalagrandConjectures.measure p A ^ 2) /
+                      TalagrandConjectures.measure p A ^ 2 ∧
+                  ∀ J ∈ TalagrandConjectures.badTwo A,
+                    1 ≤ ∑ I, if I ≤ J then TalagrandConjectures.liCertificate p A I else 0
+@TalagrandConjectures.li_weaklySmall_badTwo : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ (A : Set (TalagrandConjectures.Cube X)),
+        2 / 3 ≤ TalagrandConjectures.measure p A → TalagrandConjectures.WeaklySmall p (TalagrandConjectures.badTwo A)
+@TalagrandConjectures.li_weaklySmall_badTwo_half : ∀ {X : Type} [inst : Fintype X] [inst_1 : DecidableEq X] {p : ℝ},
+  0 < p →
+    p < 1 →
+      ∀ (A : Set (TalagrandConjectures.Cube X)),
+        1 / 2 ≤ TalagrandConjectures.measure p A →
+          TalagrandConjectures.WeaklySmall (p / 2) (TalagrandConjectures.badTwo A)
+'TalagrandConjectures.park_talagrand_theorem_2_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.conjecture_9_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.conjecture_9_1_up' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.conjecture_9_1_multiplicative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.conjecture_7_12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.conjecture_7_9' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.conjecture_7_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.conjecture_7_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.fang_wang_theorem_1_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.fang_wang_target_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.li_theorem_1_9' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.li_no_spread_badTwo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.li_fractional_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.li_weaklySmall_badTwo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TalagrandConjectures.li_weaklySmall_badTwo_half' depends on axioms: [propext, Classical.choice, Quot.sound]
