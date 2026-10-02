@@ -1,0 +1,34 @@
+import TalagrandConjectures
+
+set_option pp.fullNames true
+
+#check @TalagrandConjectures.park_talagrand_theorem_2_1
+#check @TalagrandConjectures.conjecture_9_1_up
+#check @TalagrandConjectures.conjecture_9_1_multiplicative
+#check @TalagrandConjectures.conjecture_7_12
+#check @TalagrandConjectures.conjecture_7_9
+#check @TalagrandConjectures.conjecture_7_3
+#check @TalagrandConjectures.conjecture_7_2
+#check @TalagrandConjectures.fang_wang_theorem_1_2
+#check @TalagrandConjectures.fang_wang_target_density
+#check @TalagrandConjectures.li_theorem_1_9
+#check @TalagrandConjectures.li_no_spread_badTwo
+#check @TalagrandConjectures.li_fractional_certificate
+#check @TalagrandConjectures.li_weaklySmall_badTwo
+#check @TalagrandConjectures.li_weaklySmall_badTwo_half
+
+#print axioms TalagrandConjectures.park_talagrand_theorem_2_1
+#print axioms TalagrandConjectures.conjecture_9_1
+#print axioms TalagrandConjectures.conjecture_9_1_up
+#print axioms TalagrandConjectures.conjecture_9_1_multiplicative
+#print axioms TalagrandConjectures.conjecture_7_12
+#print axioms TalagrandConjectures.conjecture_7_9
+#print axioms TalagrandConjectures.conjecture_7_3
+#print axioms TalagrandConjectures.conjecture_7_2
+#print axioms TalagrandConjectures.fang_wang_theorem_1_2
+#print axioms TalagrandConjectures.fang_wang_target_density
+#print axioms TalagrandConjectures.li_theorem_1_9
+#print axioms TalagrandConjectures.li_no_spread_badTwo
+#print axioms TalagrandConjectures.li_fractional_certificate
+#print axioms TalagrandConjectures.li_weaklySmall_badTwo
+#print axioms TalagrandConjectures.li_weaklySmall_badTwo_half
