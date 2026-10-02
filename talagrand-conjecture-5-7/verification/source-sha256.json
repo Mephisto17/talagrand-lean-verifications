@@ -1,0 +1,19 @@
+{
+  "TalagrandSelector.lean": "be0385d6897cb97133c21f3a3c5f4cc323a1446f309c106f3350906f4aad014b",
+  "TalagrandConjecture57.lean": "2849da38e0105e041b7872b6450e8e5a4cfc94ac7842146b3d9062a21c873cae",
+  "Audit.lean": "fb58ed8b5143ea73b88d12a3f229a678587cf6d179acd21c80331bbd195a1dfc",
+  "README.md": "e002af265217f054d976f6a7da21029a36167ca875b9f1b2f8eb880cea720664",
+  "lakefile.toml": "3a62d1f5ce316d747abadf3ced57c76abc35a13d36b9585b37cd162961c37d2a",
+  "lake-manifest.json": "4435aeb02dc2568096344910050b828a1e0e7bb547e2cc9e5b2f06a87b950695",
+  "lean-toolchain": "56a12c348c1fb7bb3e6475757349976a7e93e94fa2918bf92811b1b2e9634504",
+  "scripts/amalgamate.py": "f47301ed64279ac9acf47235182b25cd839f85cdcfd1a53b673e4fee4d136623",
+  "TalagrandSelector/Bernoulli.lean": "12098da4e1ca834b37a249c449ad2e2575360c1be6994b2f255b81bd1c089812",
+  "TalagrandSelector/Counting.lean": "97e6cbac766c5c1e0d382dc96b714008329024aa25ff8d51266c16fc28efaae9",
+  "TalagrandSelector/CoverCost.lean": "c489248379deab6fec62729f716acf886d3f6e099c7c9adb537fac45de7193c9",
+  "TalagrandSelector/Extended.lean": "a37d99489d35cbfc238d09049d609c78251c22d12ec47642921b0cdaa9f8bff7",
+  "TalagrandSelector/Main.lean": "7b758dfc5000cd9c90c5da06758b0f0904ebb6ca2b136bc04c1cc98013ae95dc",
+  "TalagrandSelector/Numeric.lean": "886eb09a78de315ba856e52dc033376e56e19b1ab700a0766bd15c19b5fb6ac2",
+  "TalagrandSelector/Reduction.lean": "aab327ef04d8f11dbd09c80ca4f3dd75fe97033571352665d4b19e2f2f0216fd",
+  "TalagrandSelector/Threshold.lean": "6780fc04c4f67f73e43a5976438714d866202f28baf86ed84102e89a41d9a400",
+  "TalagrandSelector/Witness.lean": "2d7a1e546777020756814cb32ed0bdddef36391e8d7e999b5e75025cb08d9cf5"
+}
