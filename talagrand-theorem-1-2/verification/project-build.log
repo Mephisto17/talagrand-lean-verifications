@@ -1,0 +1,110 @@
+⚠ [8655/8665] Replayed TalagrandSelector.Threshold
+warning: TalagrandSelector/Threshold.lean:26:0: automatically included section variable(s) unused in theorem `TalagrandSelector.clipped_zero`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Threshold.lean:67:0: automatically included section variable(s) unused in theorem `TalagrandSelector.clipped_step`:
+  [Fintype X]
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Threshold.lean:80:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandSelector/Threshold.lean:132:0: automatically included section variable(s) unused in theorem `TalagrandSelector.clipped_exchange`:
+  [Fintype X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Threshold.lean:176:0: automatically included section variable(s) unused in theorem `TalagrandSelector.heavy_antitone_threshold`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [8657/8665] Replayed TalagrandSelector.Reduction
+info: TalagrandSelector/Reduction.lean:278:0: 'TalagrandPositiveReduction.positive_theorem12_of_normalized_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: TalagrandSelector/Reduction.lean:279:0: 'TalagrandPositiveReduction.exists_positive_theorem12_of_normalized_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [8658/8665] Replayed TalagrandSelector.Bernoulli
+warning: TalagrandSelector/Bernoulli.lean:14:0: automatically included section variable(s) unused in theorem `TalagrandSelector.average_congr`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Bernoulli.lean:20:0: automatically included section variable(s) unused in theorem `TalagrandSelector.average_add`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Bernoulli.lean:24:0: automatically included section variable(s) unused in theorem `TalagrandSelector.average_mul`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Bernoulli.lean:57:8: automatically included section variable(s) unused in theorem `TalagrandSelector.average_empty`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Bernoulli.lean:66:0: automatically included section variable(s) unused in theorem `TalagrandSelector.average_mono`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Bernoulli.lean:161:0: automatically included section variable(s) unused in theorem `TalagrandSelector.average_univ`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8659/8665] Replayed TalagrandSelector.Counting
+warning: TalagrandSelector/Counting.lean:116:8: 'change (e.1 ∪ e.2.2) \ e.2.2 = (e'.1 ∪ e'.2.2) \ e'.2.2' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8662/8665] Replayed TalagrandSelector.Main
+warning: TalagrandSelector/Main.lean:52:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TalagrandSelector/Main.lean:126:12: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: TalagrandSelector/Main.lean:143:0: 'TalagrandSelector.normalized_selector_bound' depends on axioms: [propext, choice, Quot.sound]
+info: TalagrandSelector/Main.lean:144:0: 'TalagrandSelector.theorem_1_2_positive' depends on axioms: [propext, choice, Quot.sound]
+info: TalagrandSelector/Main.lean:145:0: 'TalagrandSelector.exists_universal_constant' depends on axioms: [propext, choice, Quot.sound]
+⚠ [8663/8665] Replayed TalagrandSelector.Extended
+warning: TalagrandSelector/Extended.lean:25:0: automatically included section variable(s) unused in theorem `TalagrandSelector.nonempty_of_positive_extended`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Extended.lean:31:0: automatically included section variable(s) unused in theorem `TalagrandSelector.bounded_of_finite_expectation`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TalagrandSelector/Extended.lean:56:0: automatically included section variable(s) unused in theorem `TalagrandSelector.extendedValue_eq_ofReal`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: TalagrandSelector/Extended.lean:117:0: 'TalagrandSelector.theorem_1_2_finite_expectation' depends on axioms: [propext, choice, Quot.sound]
+✔ [8664/8665] Built TalagrandSelector (3.9s)
+Build completed successfully (8665 jobs).
