@@ -1,81 +1,106 @@
 # Talagrand Lean Verifications
 
-This repository collects Lean formalizations and verification artifacts for Talagrand-related theorems and conjectures. Each new result should be kept as a reproducible project with its source, build configuration, documentation, and verification records.
+This repository collects Lean formalizations and verification artifacts for Talagrand-related theorems and conjectures. Each result lives in an independent project directory with its sources, dependency pins, mathematical scope, and verification records.
 
 ## Projects
 
 ### Kahn–Kalai conjecture
 
-The first project is the Kahn–Kalai verification. Its original files are currently kept at the repository root for compatibility with the initial upload:
+The complete project is in **[Kahn-Kalai/](Kahn-Kalai/)**.
 
-- [KahnKalaiVerified.lean](KahnKalaiVerified.lean): self-contained Lean source.
-- [Paper.lean](Paper.lean): paper-specific statements and bridges.
-- [KahnKalai/](KahnKalai/): modular source files.
-- [verification/](verification/): compiler, build, axiom, and checksum records.
+- [Project README and exact scope](Kahn-Kalai/README.md)
+- [KahnKalaiVerified.lean](Kahn-Kalai/KahnKalaiVerified.lean): standalone source, apart from mathlib.
+- [Paper.lean](Kahn-Kalai/Paper.lean): paper-specific statements and bridges.
+- [KahnKalai/](Kahn-Kalai/KahnKalai/): modular source files.
+- [verification/](Kahn-Kalai/verification/): supplied build logs, axiom reports, and checksums.
+- [LICENSE](Kahn-Kalai/LICENSE): Apache-2.0 license text.
 
-The project proves the stated quantitative bound through the Tran–Vu route and documents its exact scope in the source comments and verification files. The upstream formalization and Apache-2.0 attribution are recorded in the project materials.
+The quantitative bound is proved through the Tran–Vu route, using Dan Clemens Posch's upstream formalization. Several Park–Pham proof steps are also formalized; the complete original randomized Park–Pham argument is not transcribed line by line. See the project README for the precise statements, attribution, and limitations.
 
 ### Talagrand / Park–Pham Theorem 1.2
 
-The second project is organized under [talagrand-theorem-1-2/](talagrand-theorem-1-2/). It contains a complete Lean 4.32.0 project for the corrected positive-finite-expectation form of Theorem 1.2, with the explicit constant L = 2048.
+The complete project is in **[talagrand-theorem-1-2/](talagrand-theorem-1-2/)**. It formalizes the corrected positive-finite-expectation version of Theorem 1.2 with the explicit constant L = 2048.
 
+- [Project README and exact hypotheses](talagrand-theorem-1-2/README.md)
 - [TalagrandTheorem12.lean](talagrand-theorem-1-2/TalagrandTheorem12.lean): standalone theorem file.
 - [TalagrandSelector/](talagrand-theorem-1-2/TalagrandSelector/): modular development.
-- [verification/](talagrand-theorem-1-2/verification/): build logs, result data, axiom report, and source hashes.
-- [README](talagrand-theorem-1-2/README.md): theorem scope and reproduction instructions.
+- [verification/](talagrand-theorem-1-2/verification/): supplied build logs, axiom reports, results, and source hashes.
 
-The theorem file and project README describe the hypotheses precisely, including nonnegative weights, positive parameter, positive extended expectation, and finite extended expectation.
+The public theorem assumes a finite ground set, 0 < p < 1, nonnegative weights, and positive finite extended expectation. The weight collection may be infinite; attainment of the supremum is not assumed.
 
 ## Repository layout
 
-New formalizations should use one top-level directory per theorem or conjecture, for example:
+```text
+talagrand-lean-verifications/
+├── README.md
+├── Kahn-Kalai/
+│   ├── README.md
+│   ├── MIGRATION.md
+│   ├── LICENSE
+│   ├── KahnKalaiVerified.lean
+│   ├── KahnKalai.lean, Paper.lean, Solution.lean, Audit.lean
+│   ├── KahnKalai/
+│   ├── verification/
+│   ├── lakefile.toml, lake-manifest.json, lean-toolchain
+│   └── verify.sh
+└── talagrand-theorem-1-2/
+    ├── README.md
+    ├── TalagrandTheorem12.lean, TalagrandSelector.lean, Audit.lean
+    ├── TalagrandSelector/
+    ├── verification/
+    ├── scripts/
+    └── lakefile.toml, lake-manifest.json, lean-toolchain
+```
 
-~~~text
-talagrand-theorem-1-2/
-  source files and Lean configuration
-  TalagrandSelector/
-  verification/
-~~~
-
-The root Kahn–Kalai files are retained as the initial project snapshot. A later cleanup may move them under a dedicated directory once compatibility with existing links is no longer needed.
+There is no shared Lake project at the repository root. Keep each result's dependencies and audit records within its own directory. The internal directory `Kahn-Kalai/KahnKalai/` retains the Lean module name `KahnKalai`, so existing `import KahnKalai...` declarations still work within that project.
 
 ## Reproduce the projects
 
-Install the Lean toolchain required by the project and make sure lake is available.
+Install Lean/Elan and Git. Each project's `lean-toolchain`, `lakefile.toml`, and `lake-manifest.json` pin its environment. Run the following blocks separately from the repository root.
 
-For the Kahn–Kalai project, from the repository root run:
+Kahn–Kalai (Bash, including Git Bash or WSL on Windows; Python 3 is also used by the audit script):
 
-~~~sh
+```sh
+cd Kahn-Kalai
 lake exe cache get
-./verify.sh
-~~~
+bash verify.sh
+```
 
-For Theorem 1.2, run:
+Theorem 1.2:
 
-~~~sh
+```sh
 cd talagrand-theorem-1-2
+lake exe cache get
 lake build
+lake env lean Audit.lean
 lake env lean TalagrandTheorem12.lean
-~~~
+```
 
-Each project pins its Lean and mathlib versions in its lean-toolchain, lakefile.toml, and lake-manifest.json. The recorded logs under each verification/ directory are the results supplied with that project; rerun the commands when changing the source.
+The standalone file and modular library in each project define the same names. Check them separately rather than importing both into one Lean file. The records under `verification/` are supplied build evidence; rerun the checks after editing proofs. The directory migration itself does not constitute a fresh Lean compilation.
+
+## Path migration and existing links
+
+All former root-level Kahn–Kalai project files and the old `KahnKalai/` and `verification/` directories now live under `Kahn-Kalai/`. The collection README remains here; the original Kahn–Kalai README is restored at [Kahn-Kalai/README.md](Kahn-Kalai/README.md).
+
+See the **[complete old-to-new path map](Kahn-Kalai/MIGRATION.md)** for updated file links and a permanent link to the pre-migration snapshot. GitHub does not provide repository-controlled redirects for arbitrary moved file URLs. Update bookmarks or external references that use old `main` paths; links pinned to old commit IDs remain available through Git history.
 
 ## Add a future result
 
-Clone the repository once, create a directory named after the theorem, and keep the source and its verification data together:
+Create one top-level directory per theorem or conjecture. Include its own README, Lean sources, Lake configuration, toolchain pin, verification records, and applicable license/attribution information. Then add it to the project list above.
 
-~~~sh
+```sh
 git clone https://github.com/Mephisto17/talagrand-lean-verifications.git
 cd talagrand-lean-verifications
 mkdir talagrand-new-result
-# add Lean files, README, lake configuration, and verification/
-git add .
+# Add the complete project under talagrand-new-result/.
+# Update this README with links and reproduction commands.
+git add talagrand-new-result README.md
 git commit -m "Add Talagrand new result"
 git push
-~~~
+```
 
-For a small change, the GitHub web interface also works: open the target project directory, choose Add file then Upload files, upload the files, write a commit message, and commit directly to main.
+If already cloned, pull the latest changes before adding a result. In the GitHub web interface, open the target project directory before choosing **Add file → Upload files**, and preserve nested directories when uploading modules and reports.
 
 ## Licenses and attribution
 
-Keep the license and copyright notices supplied with each formalization. The Kahn–Kalai materials include Apache-2.0 text and attribution to the upstream formalization. For each future project, record its mathematical sources, code sources, exact revisions, theorem scope, and permitted axioms in that project's README and verification directory.
+The Kahn–Kalai license and upstream attribution are kept with that project in [Kahn-Kalai/LICENSE](Kahn-Kalai/LICENSE) and [Kahn-Kalai/README.md](Kahn-Kalai/README.md). Relocating that license does not change any existing license terms. Preserve all applicable licenses and copyright notices when adding future results, and record mathematical sources, code sources, exact revisions, theorem scope, and audited axioms in each project's documentation.
