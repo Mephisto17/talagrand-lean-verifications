@@ -1,0 +1,45 @@
+VERIFICATION RESULT: PASS
+
+Lean 4.32.0; mathlib v4.32.0.
+Project build: successful, zero errors.
+Consolidated KahnKalaiVerified.lean: successful, exit code 0.
+Eleven substantive declarations audited in each form.
+Every reported transitive axiom list contains only:
+  propext, Classical.choice, Quot.sound.
+No proof placeholders, custom axioms, or native_decide in the proof sources.
+There are cosmetic style/linter warnings in the upstream files.
+
+PROVED MAIN INEQUALITY
+  p_c(F) <= 100000 * q(F) * log_2(ell(F))
+  ell(F) = max(2, maximum size of a minimal member of F).
+  q(F) is the integral expectation threshold, not the fractional threshold.
+  See theorem_1_1_increasing in namespace ParkPhamPaper.
+
+SCOPE
+  Complete theorem proof: Tran--Vu route, using the cited existing Lean code.
+  Direct checks of the supplied Park--Pham paper: minimum fragments,
+  equation (16), pair counting, weighted pair bound, deterministic recursion,
+  Proposition 2.3 given the terminal size bound, and threshold/minimal-member
+  identifications. The original randomized iteration and asymptotic estimate
+  (20) have NOT been formally verified here. No unproved version of them is
+  used as an assumption in the final theorem.
+
+  Infimum/supremum definitions of thresholds are used. The unique-root
+  characterization mu_p(F)=1/2 is not additionally proved in this project.
+
+PROVENANCE
+  https://github.com/dcposch/kahn-kalai-lean
+  641aa75f8e873d31442f2f7c317b2e7582a26d94
+  Author: Dan Clemens Posch. Apache-2.0.
+  All six upstream KahnKalai proof modules and Solution.lean are unchanged.
+  Original attachment SHA256:
+  99741b85652fc68329d046aef758891d330971236406cc9932b20bf91c1f06aa
+
+EXECUTION ENVIRONMENT
+  Official Lean release binaries were used unchanged. This hosted runtime
+  requires a compatibility wrapper for executable-path lookup: requests for
+  the current process's /proc/<pid>/exe are redirected to /proc/self/exe.
+  The wrapper does not change Lean's kernel, elaborator, or proof terms.
+  Ordinary local environments should run the provided verify.sh directly.
+
+See build.log, axioms.txt, and standalone.log for the actual compiler output.

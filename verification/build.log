@@ -1,0 +1,56 @@
+⚠ [2006/2158] Replayed KahnKalai.Basic
+warning: KahnKalai/Basic.lean:149:21: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, n̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵Fintype.card_coe, Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: KahnKalai/Basic.lean:149:35: This simp argument is unused:
+  Fintype.card_coe
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, nsmul_eq_mul, F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵c̵o̵e̵,̵ ̵Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: KahnKalai/Basic.lean:158:21: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, n̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵Fintype.card_coe, Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: KahnKalai/Basic.lean:158:35: This simp argument is unused:
+  Fintype.card_coe
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, nsmul_eq_mul, F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵c̵o̵e̵,̵ ̵Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3111/3464] Replayed KahnKalai.ParkPham
+warning: KahnKalai/ParkPham.lean:172:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: KahnKalai/ParkPham.lean:179:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8664/8665] Built Paper (6.0s)
+warning: Paper.lean:26:0: automatically included section variable(s) unused in theorem `ParkPhamPaper.exists_minimumFragment`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Paper.lean:36:0: automatically included section variable(s) unused in theorem `ParkPhamPaper.fragment_subset`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Paper.lean:42:0: automatically included section variable(s) unused in theorem `ParkPhamPaper.fragment_disjoint`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (8665 jobs).

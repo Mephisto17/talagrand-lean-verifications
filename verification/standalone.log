@@ -1,0 +1,45 @@
+KahnKalaiVerified.lean:166:21: warning: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, n̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵Fintype.card_coe, Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+KahnKalaiVerified.lean:166:35: warning: This simp argument is unused:
+  Fintype.card_coe
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, nsmul_eq_mul, F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵c̵o̵e̵,̵ ̵Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+KahnKalaiVerified.lean:175:21: warning: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, n̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵Fintype.card_coe, Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+KahnKalaiVerified.lean:175:35: warning: This simp argument is unused:
+  Fintype.card_coe
+
+Hint: Omit it from the simp argument list.
+  simp [sum_const, nsmul_eq_mul, F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵c̵o̵e̵,̵ ̵Nat.mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+KahnKalaiVerified.lean:2138:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+KahnKalaiVerified.lean:2145:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'KahnKalai.covering_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KahnKalai.park_pham' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.exists_minimumFragment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.equation_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.fragmentPairs_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.weighted_fragmentPairs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.proposition_2_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.success_of_cheap_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.theorem_1_1_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.theorem_1_1_increasing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParkPhamPaper.theorem_1_1' depends on axioms: [propext, Classical.choice, Quot.sound]
