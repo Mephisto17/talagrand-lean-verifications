@@ -1,107 +1,81 @@
-# Kahn–Kalai theorem: Lean code and verification scope
+# Talagrand Lean Verifications
 
-This project proves
+This repository collects Lean formalizations and verification artifacts for Talagrand-related theorems and conjectures. Each new result should be kept as a reproducible project with its source, build configuration, documentation, and verification records.
 
-    p_c(F) ≤ 100000 · q(F) · log₂ ell(F),
+## Projects
 
-where ell(F) = max(2, the largest size of a minimal member of F), and q is
-**the integral expectation threshold**, defined by a cover of cost at most 1/2.
-It does not substitute the fractional expectation threshold.
+### Kahn–Kalai conjecture
 
-## What this verifies
+The first project is the Kahn–Kalai verification. Its original files are currently kept at the repository root for compatibility with the initial upload:
 
-The complete quantitative proof follows Tran–Vu's inductive proof, using
-Dan Clemens Posch's existing formalization. The files under `KahnKalai/` and
-`Solution.lean` are copied without modification from:
+- [KahnKalaiVerified.lean](KahnKalaiVerified.lean): self-contained Lean source.
+- [Paper.lean](Paper.lean): paper-specific statements and bridges.
+- [KahnKalai/](KahnKalai/): modular source files.
+- [verification/](verification/): compiler, build, axiom, and checksum records.
 
-- https://github.com/dcposch/kahn-kalai-lean
-- Commit: `641aa75f8e873d31442f2f7c317b2e7582a26d94`
-- License: Apache-2.0; original author and copyright notices are retained.
+The project proves the stated quantitative bound through the Tran–Vu route and documents its exact scope in the source comments and verification files. The upstream formalization and Apache-2.0 attribution are recorded in the project materials.
 
-`Paper.lean` adds a bridge to the definitions in the supplied attachment,
-Park–Pham, *A Proof of the Kahn–Kalai Conjecture*, arXiv:2203.17207v2,
-and directly formalizes several steps of that paper.
+### Talagrand / Park–Pham Theorem 1.2
 
-| Paper statement | Lean declaration | Scope |
-|---|---|---|
-| Minimum fragment exists, §2.1 | `ParkPhamPaper.exists_minimumFragment` | Proved from a finite minimum |
-| T is contained in S and disjoint from W | `fragment_subset`, `fragment_disjoint` | Proved |
-| Equation (16), T ⊆ S-hat | `ParkPhamPaper.equation_16` | Proved, including arbitrary ties |
-| Counting the pairs in (15) | `ParkPhamPaper.fragmentPairs_card_le` | Proved with the stronger factor binomial(ell,m) |
-| Weighted fixed-size counting bound | `ParkPhamPaper.weighted_fragmentPairs_bound` | Proved |
-| Iteration invariants (8), (9) | `residual_cover_invariant`, `residual_lift_invariant` | Proved for the chosen-fragment recursion |
-| Proposition 2.3 | `ParkPhamPaper.proposition_2_3` | Proved, given the terminal size bound |
-| Cheap cover implies success | `ParkPhamPaper.success_of_cheap_cover` | Proved |
-| Original definition of p-smallness | `isPSmall_iff_coverCost` | Proved equivalent to the attained minimum cost |
-| Reduction to minimal members | `threshold_minimals`, `expectationThreshold_minimals` | Proved |
-| Theorem 1.1, with ell(F) | `ParkPhamPaper.theorem_1_1_explicit` | Complete proof via Tran–Vu |
-| Theorem 1.1 for increasing F, with direct definitions of both thresholds | `ParkPhamPaper.theorem_1_1_increasing` | Complete proof via Tran–Vu |
+The second project is organized under [talagrand-theorem-1-2/](talagrand-theorem-1-2/). It contains a complete Lean 4.32.0 project for the corrected positive-finite-expectation form of Theorem 1.2, with the explicit constant L = 2048.
 
-This is **not a line-by-line Lean verification of the entire attached
-Park–Pham proof**. In particular, its particular random iteration, choice
-of sampling sizes, and asymptotic error estimate (20) are not formalized
-here. The completed theorem uses Tran–Vu's induction in their place.
-No unproved version of any of these omitted claims is imported or assumed.
+- [TalagrandTheorem12.lean](talagrand-theorem-1-2/TalagrandTheorem12.lean): standalone theorem file.
+- [TalagrandSelector/](talagrand-theorem-1-2/TalagrandSelector/): modular development.
+- [verification/](talagrand-theorem-1-2/verification/): build logs, result data, axiom report, and source hashes.
+- [README](talagrand-theorem-1-2/README.md): theorem scope and reproduction instructions.
 
-The thresholds use infimum/supremum definitions. For a nontrivial increasing
-family these are the standard critical and expectation thresholds; the
-formal statement does not additionally prove the characterization of the
-critical probability as the unique root of mu_p(F) = 1/2. Degenerate families
-are allowed in the code with Lean's infimum conventions.
+The theorem file and project README describe the hypotheses precisely, including nonnegative weights, positive parameter, positive extended expectation, and finite extended expectation.
 
-The finite ground set is represented by a finite type `α`; a hypergraph is
-`Finset (Finset α)`. Subsets of `α` are exactly subsets of this ground set.
-All logarithms in the main bound are base 2. The constant 100000 is explicit
-and is not asserted to be optimal.
+## Repository layout
 
-## Files
+New formalizations should use one top-level directory per theorem or conjecture, for example:
 
-- `KahnKalaiVerified.lean`: self-contained source, apart from mathlib. It
-  combines the same proofs into one file; it does not import this project's
-  compiled modules.
-- `KahnKalai/` and `Solution.lean`: the original, licensed theorem proof.
-- `Paper.lean`: added paper-specific formalization and theorem statements.
-- `Audit.lean`: transitive axiom reports for eleven substantive results.
-- `verification/`: compiler version, build log, and axiom reports.
-- `verify.sh`: rebuilds the proofs and rejects nonstandard axioms.
+~~~text
+talagrand-theorem-1-2/
+  source files and Lean configuration
+  TalagrandSelector/
+  verification/
+~~~
 
-The upstream `Challenge.lean`, a statement-only comparison file containing
-proof placeholders, is deliberately excluded from this deliverable. It is
-not imported by any of the delivered proof files.
+The root Kahn–Kalai files are retained as the initial project snapshot. A later cleanup may move them under a dedicated directory once compatibility with existing links is no longer needed.
 
-## Reproduce
+## Reproduce the projects
 
-Install Lean using https://lean-lang.org/install/ and ensure `lean` and
-`lake` are available. In this directory run:
+Install the Lean toolchain required by the project and make sure lake is available.
 
-```sh
+For the Kahn–Kalai project, from the repository root run:
+
+~~~sh
 lake exe cache get
 ./verify.sh
-```
+~~~
 
-The project pins Lean 4.32.0 and mathlib v4.32.0 (exact dependency commits
-are in `lake-manifest.json`). With that version of mathlib already available,
-the standalone file can also be checked with:
+For Theorem 1.2, run:
 
-```sh
-lake env lean KahnKalaiVerified.lean
-```
+~~~sh
+cd talagrand-theorem-1-2
+lake build
+lake env lean TalagrandTheorem12.lean
+~~~
 
-Run it by itself, not after importing `Paper` into the same file: it already
-contains all project definitions and proofs.
+Each project pins its Lean and mathlib versions in its lean-toolchain, lakefile.toml, and lake-manifest.json. The recorded logs under each verification/ directory are the results supplied with that project; rerun the commands when changing the source.
 
-The permitted transitive axioms are only `propext`, `Classical.choice`, and
-`Quot.sound`, the standard foundations used by mathlib. The verification
-script rejects `sorryAx` and any additional axioms. None of the delivered
-proofs uses `native_decide` or an externally trusted boolean reduction.
+## Add a future result
 
-## Mathematical sources
+Clone the repository once, create a directory named after the theorem, and keep the source and its verification data together:
 
-- Jinyoung Park and Huy Tuan Pham, *A Proof of the Kahn–Kalai Conjecture*,
-  https://arxiv.org/abs/2203.17207v2 (the supplied PDF).
-- Phuc Tran and Van Vu, *A Short Proof of Kahn–Kalai Conjecture*,
-  Electronic Journal of Combinatorics 31(3), P3.2 (2024),
-  https://doi.org/10.37236/12266 and https://arxiv.org/abs/2303.02144.
-- The code source and exact revision are listed above. Reuse of that code
-  is attribution to an existing formalization, not a claim to have written
-  its entire proof from scratch.
+~~~sh
+git clone https://github.com/Mephisto17/talagrand-lean-verifications.git
+cd talagrand-lean-verifications
+mkdir talagrand-new-result
+# add Lean files, README, lake configuration, and verification/
+git add .
+git commit -m "Add Talagrand new result"
+git push
+~~~
+
+For a small change, the GitHub web interface also works: open the target project directory, choose Add file then Upload files, upload the files, write a commit message, and commit directly to main.
+
+## Licenses and attribution
+
+Keep the license and copyright notices supplied with each formalization. The Kahn–Kalai materials include Apache-2.0 text and attribution to the upstream formalization. For each future project, record its mathematical sources, code sources, exact revisions, theorem scope, and permitted axioms in that project's README and verification directory.
