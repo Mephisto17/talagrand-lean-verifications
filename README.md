@@ -17,17 +17,27 @@ The complete project is in **[Kahn-Kalai/](Kahn-Kalai/)**.
 
 The quantitative bound is proved through the Tran–Vu route, using Dan Clemens Posch's upstream formalization. Several Park–Pham proof steps are also formalized; the complete original randomized Park–Pham argument is not transcribed line by line. See the project README for the precise statements, attribution, and limitations.
 
-### Talagrand / Park–Pham Theorem 1.2
+### Talagrand / Park–Pham Conjecture 5.7
 
-The complete project is in **[talagrand-theorem-1-2/](talagrand-theorem-1-2/)**. It formalizes the corrected positive-finite-expectation version of Theorem 1.2 with the explicit constant L = 2048.
+The complete project is in **[talagrand-conjecture-5-7/](talagrand-conjecture-5-7/)**. It formalizes the corrected positive-finite-expectation version of Conjecture 5.7 with the explicit constant L = 2048.
 
-- [Project README and exact hypotheses](talagrand-theorem-1-2/README.md)
-- [TalagrandTheorem12.lean](talagrand-theorem-1-2/TalagrandTheorem12.lean): standalone theorem file.
-- [TalagrandSelector/](talagrand-theorem-1-2/TalagrandSelector/): modular development.
-- [verification/](talagrand-theorem-1-2/verification/): supplied build logs, axiom reports, results, and source hashes.
+- [Project README and exact hypotheses](talagrand-conjecture-5-7/README.md)
+- [TalagrandConjecture57.lean](talagrand-conjecture-5-7/TalagrandConjecture57.lean): standalone theorem file.
+- [TalagrandSelector/](talagrand-conjecture-5-7/TalagrandSelector/): modular development.
+- [verification/](talagrand-conjecture-5-7/verification/): supplied build logs, axiom reports, results, and source hashes.
 
 The public theorem assumes a finite ground set, 0 < p < 1, nonnegative weights, and positive finite extended expectation. The weight collection may be infinite; attainment of the supremum is not assumed.
 
+### Talagrand's five conjectures
+
+The third project is [talagrand-five-conjectures/](talagrand-five-conjectures/). It contains complete Lean proofs for five Talagrand conjectures, together with supporting results by Li, Fang–Wang, and Park–Talagrand.
+
+- [Project README and conjecture scope](talagrand-five-conjectures/README.md)
+- [TalagrandFiveConjectures.lean](talagrand-five-conjectures/TalagrandFiveConjectures.lean): standalone source.
+- [TalagrandConjectures/](talagrand-five-conjectures/TalagrandConjectures/): modular proofs.
+- [verification/](talagrand-five-conjectures/verification/): build, axiom, result, source, and article records.
+
+The project records the exact interpretation of Conjectures 9.1, 7.12, 7.9, 7.3, and 7.2 in its own README. Its theorem and supporting-result names are preserved as Lean declarations; the supplied verification reports document the proof dependencies.
 ## Repository layout
 
 ```text
@@ -43,9 +53,10 @@ talagrand-lean-verifications/
 │   ├── verification/
 │   ├── lakefile.toml, lake-manifest.json, lean-toolchain
 │   └── verify.sh
-└── talagrand-theorem-1-2/
+├── talagrand-conjecture-5-7/
+└── talagrand-five-conjectures/
     ├── README.md
-    ├── TalagrandTheorem12.lean, TalagrandSelector.lean, Audit.lean
+    ├── TalagrandConjecture57.lean, TalagrandSelector.lean, Audit.lean
     ├── TalagrandSelector/
     ├── verification/
     ├── scripts/
@@ -66,15 +77,25 @@ lake exe cache get
 bash verify.sh
 ```
 
-Theorem 1.2:
+Conjecture 5.7:
 
 ```sh
-cd talagrand-theorem-1-2
+cd talagrand-conjecture-5-7
 lake exe cache get
 lake build
 lake env lean Audit.lean
-lake env lean TalagrandTheorem12.lean
+lake env lean TalagrandConjecture57.lean
 ```
+
+Five conjectures:
+
+~~~sh
+cd talagrand-five-conjectures
+lake exe cache get
+lake build
+lake env lean Audit.lean
+lake env lean TalagrandFiveConjectures.lean
+~~~
 
 The standalone file and modular library in each project define the same names. Check them separately rather than importing both into one Lean file. The records under `verification/` are supplied build evidence; rerun the checks after editing proofs. The directory migration itself does not constitute a fresh Lean compilation.
 
